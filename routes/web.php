@@ -7,7 +7,7 @@ use App\Http\Controllers\TransaccionController;
 use App\Models\Cuenta;
 use App\Models\Transaccion;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CuentaController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -37,5 +37,9 @@ Route::middleware('auth')->group(function () {
         ->parameters(['transacciones' => 'transaccion'])
         ->except('show');
 });
+
+Route::resource('cuentas', CuentaController::class)
+    ->parameters(['cuentas' => 'cuenta'])
+    ->except('show');
 
 require __DIR__.'/auth.php';
