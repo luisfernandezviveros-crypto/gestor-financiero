@@ -12,16 +12,19 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('cuentas.index')" :active="request()->routeIs('cuentas.*')">
-                        Cuentas
-                    </x-nav-link>
-                    <x-nav-link :href="route('transacciones.index')" :active="request()->routeIs('transacciones.*')">
-                        Transacciones
-                    </x-nav-link>
-                </div>
+                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    {{ __('Dashboard') }}
+                </x-nav-link>
+                <x-nav-link :href="route('categorias.index')" :active="request()->routeIs('categorias.*')">
+                    Categorías
+                </x-nav-link>
+                <x-nav-link :href="route('cuentas.index')" :active="request()->routeIs('cuentas.*')">
+                    Cuentas
+                </x-nav-link>
+                <x-nav-link :href="route('transacciones.index')" :active="request()->routeIs('transacciones.*')">
+                    Transacciones
+                </x-nav-link>
+            </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -72,9 +75,13 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
+       
+            <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('categorias.index')" :active="request()->routeIs('categorias.*')">
+                Categorías
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('cuentas.index')" :active="request()->routeIs('cuentas.*')">
                 Cuentas
