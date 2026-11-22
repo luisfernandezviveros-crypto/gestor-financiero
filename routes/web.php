@@ -7,7 +7,6 @@ use App\Http\Controllers\TransaccionController;
 use App\Models\Cuenta;
 use App\Models\Transaccion;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CuentaController;
 Route::get('/', function () {
     return view('welcome');
 });
