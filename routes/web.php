@@ -37,8 +37,4 @@ Route::middleware('auth')->group(function () {
         ->except('show');
 });
 
-Route::resource('cuentas', CuentaController::class)
-    ->parameters(['cuentas' => 'cuenta'])
-    ->except('show');
-
 require __DIR__.'/auth.php';
